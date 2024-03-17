@@ -1,0 +1,232 @@
+body {
+    background-color: #212529; /* สี gray-900 ของ Bootstrap 4 */
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-behavior: smooth; /* Add smooth scrolling effect */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    padding: 10px; /* เพิ่ม padding ด้านบนและด้านล่าง */
+}
+
+.row::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+.row::-webkit-scrollbar-track {
+    background: transparent; /* Set the background color of the scrollbar track */
+}
+
+.row::-webkit-scrollbar-thumb {
+    background-color: #343a40; /* Set the color of the scrollbar thumb (optional) */
+    border-radius: 0.5rem; /* Customize the thumb border-radius (optional) */
+}
+
+.row:hover::-webkit-scrollbar-thumb {
+    background-color: #6c757d; /* Change the thumb color on hover (optional) */
+}
+
+.card {
+    border: none; /* ลบ border ของ card */
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* ให้รูปเต็มความกว้างของ col-md-4 */
+    height: auto;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.card-info {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7); /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    transition: opacity 0.3s;
+}
+
+.card:hover .card-info {
+    display: block;
+    cursor: pointer;
+}
+
+.card:hover .card-info h5,
+.card:hover .card-info p {
+    color: #f8f9fa; /* สีข้อความเมื่อโฮเวอร์ */
+}
+
+.container-fluid {
+    position: relative;
+    width: 100%;
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+/* CSS สำหรับ Bootstrap */
+.custom-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#animeCarousel {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ปรับขนาดของ Modal */
+.modal-dialog {
+    max-width: 70%; /* ขนาดใหญ่สุด 80% ของหน้าจอ */
+}
+
+/* ปรับขนาดรูปภาพให้พอดีกับขนาด Modal */
+.modal-body img {
+    width: 100%; /* ขนาดรูปภาพเต็มขนาดของ Modal */
+    height: auto; /* รักษาอัตราส่วน */
+}
+
+/* ปรับขนาดตัวหนังสือให้เหมาะสมกับ Bootstrap */
+.modal-body h5 {
+    font-size: 32px; /* ปรับขนาดตัวหนังสือ */
+    line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
+    margin-top: 15px;
+    color: rgb(255, 88, 88);
+}
+.modal-body p {
+    font-size: 20px; /* ปรับขนาดตัวหนังสือ */
+    line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
+    margin-top: 15px;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-body {
+    border: none;
+}
+
+.modal-content {
+    background-color: #212529;
+    color: white;
+}
+
+/* Change the close button color */
+.modal-content .close {
+    color: white;
+}
+
+.modal .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+}
+
+/* Increase the button size on hover */
+.read-more-button {
+    font-size: 36px; /* Initial font size */
+    padding: 10px 20px;
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.3s, font-size 0.3s; /* Add a smooth transition effect */
+}
+
+.read-more-button:hover {
+    font-size: 40px; /* Increase the font size on hover */
+    transform: scale(1.1); /* Increase button size */
+}
+
+/* เมื่อหน้าจอมีขนาดเล็กขึ้น (ตัวอย่าง: 768px) */
+@media (max-width: 991px) {
+    .read-more-button {
+        font-size: 18px; /* ปรับ font size ตามที่คุณต้องการ */
+        transform: scale(1); /* Initial scale */
+        transition: transform 0.3s, font-size 0.3s; /* Add a smooth transition effect */
+    }
+    .read-more-button:hover {
+        font-size: 26px; /* Increase the font size on hover */
+        transform: scale(1.1); /* Increase button size */
+    }
+}
+
+/* เมื่อหน้าจอมีขนาดเล็กขึ้น (ตัวอย่าง: 768px) */
+@media (max-width: 768px) {
+    .read-more-button {
+        font-size: 14px; /* ปรับ font size ตามที่คุณต้องการ */
+        transform: scale(1); /* Initial scale */
+        transition: transform 0.3s, font-size 0.3s; /* Add a smooth transition effect */
+    }
+    .read-more-button:hover {
+        font-size: 20px; /* Increase the font size on hover */
+        transform: scale(1.1); /* Increase button size */
+    }
+}
+
+/* เมื่อหน้าจอมีขนาดเล็กขึ้น (ตัวอย่าง: 768px) */
+@media (max-width: 579px) {
+    .read-more-button {
+        font-size: 12px; /* ปรับ font size ตามที่คุณต้องการ */
+        transform: scale(1); /* Initial scale */
+        transition: transform 0.3s, font-size 0.3s; /* Add a smooth transition effect */
+    }
+    .read-more-button:hover {
+        font-size: 14px; /* Increase the font size on hover */
+        transform: scale(1.1); /* Increase button size */
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .card:hover .card-info {
+        display: none;
+        cursor: pointer;
+    }
+
+    .modal-dialog {
+        max-width: 100%; /* ขนาดใหญ่สุด 100% ของหน้าจอ */
+        padding: 30px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col-md-4 {
+        flex-basis: 50%; /* แสดงผลแถวละ 2 อัน */
+        padding: 5px;
+    }
+    .col-md-6 {
+        flex-basis: 100%; /* แสดงผลแถวละ 2 อัน */
+        padding: 10px;
+    }
+    .col-md-5 {
+        flex-basis: 50%; /* แสดงผลแถวละ 2 อัน */
+        padding: 5px;
+    }
+}

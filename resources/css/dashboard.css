@@ -1,0 +1,33 @@
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card {
+    width: 30%; /* ปรับขนาดของการ์ดให้เหมาะสมกับแนวนอน */
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.card-text {
+    text-align: center; /* จัดให้ข้อความอยู่ด้านซ้าย */
+    padding: 10px; /* เพิ่ม Padding ข้างในของการ์ด */
+    font-size: 70px;
+}
+
+.card-text a {
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+/* ปรับแต่งเมื่อโฮเวอร์บน card */
+.card:hover {
+    transform: scale(1.05); /* เพิ่มขนาดของ card เมื่อโฮเวอร์ */
+    transition: transform 0.3s ease; /* เพิ่มอนิเมชันเมื่อโฮเวอร์ */
+    cursor: pointer;
+}

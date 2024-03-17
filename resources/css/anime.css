@@ -1,0 +1,144 @@
+body {
+    background-color: #212529; /* สี gray-900 ของ Bootstrap 4 */
+}
+
+.row {
+    display: flex;
+    padding: 10px; /* เพิ่ม padding ด้านบนและด้านล่าง */
+}
+
+.container-fruid h2 {
+    margin-top: 60px;
+}
+
+.col-md-4 {
+    padding: 10px;
+}
+
+.row::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+.row::-webkit-scrollbar-track {
+    background: transparent; /* Set the background color of the scrollbar track */
+}
+
+.row::-webkit-scrollbar-thumb {
+    background-color: #343a40; /* Set the color of the scrollbar thumb (optional) */
+    border-radius: 0.5rem; /* Customize the thumb border-radius (optional) */
+}
+
+.row:hover::-webkit-scrollbar-thumb {
+    background-color: #6c757d; /* Change the thumb color on hover (optional) */
+}
+
+.card {
+    border: none; /* ลบ border ของ card */
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* ให้รูปเต็มความกว้างของ col-md-4 */
+    height: auto;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.card-info {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7); /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    transition: opacity 0.3s;
+}
+
+.card:hover .card-info {
+    display: block;
+    cursor: pointer;
+}
+
+.card:hover .card-info h5,
+.card:hover .card-info p {
+    color: #f8f9fa; /* สีข้อความเมื่อโฮเวอร์ */
+}
+
+/* ปรับขนาดของ Modal */
+.modal-dialog {
+    max-width: 70%; /* ขนาดใหญ่สุด 80% ของหน้าจอ */
+}
+
+/* ปรับขนาดรูปภาพให้พอดีกับขนาด Modal */
+.modal-body img {
+    width: 100%; /* ขนาดรูปภาพเต็มขนาดของ Modal */
+    height: auto; /* รักษาอัตราส่วน */
+}
+
+/* ปรับขนาดตัวหนังสือให้เหมาะสมกับ Bootstrap */
+.modal-body h5 {
+    font-size: 32px; /* ปรับขนาดตัวหนังสือ */
+    line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
+    margin-top: 15px;
+    color: rgb(255, 88, 88);
+}
+.modal-body p {
+    font-size: 20px; /* ปรับขนาดตัวหนังสือ */
+    line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
+    margin-top: 15px;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-body {
+    border: none;
+}
+
+.modal-content {
+    background-color: #212529;
+    color: white;
+}
+
+/* Change the close button color */
+.modal-content .close {
+    color: white;
+}
+
+.modal .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+}
+
+@media (max-width: 991px) {
+    /* CSS for responsive navbar */
+    .navbar-collapse {
+        position: absolute;
+        top: 56px; /* Adjust this value as needed based on your navbar's height */
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Set a high z-index value to ensure it overlays other content */
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
